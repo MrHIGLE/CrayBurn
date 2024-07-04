@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context, '/home');
+            Navigator.pushReplacementNamed(context, '/home');
           }),
       ),
       
@@ -66,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                           width: 18.0,
                         ),
                         SizedBox(width: 4.0),
-                        Text('Log in with Facebook'),
+                        Text('Logeate con Facebook'),
                       ],
                     ),
                   ),

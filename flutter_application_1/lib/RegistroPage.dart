@@ -18,7 +18,7 @@ class _RegistroPageState extends State<RegistroPage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context, '/home');
+            Navigator.pushReplacementNamed(context, '/home');
           }),
       ),
       body: Form(

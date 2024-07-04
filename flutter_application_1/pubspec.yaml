@@ -66,9 +66,23 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    #Imagenes carousel_home
+     - assets\Imagenes\Caruosel_home\CrayBurn_1.jpg
+     - assets\Imagenes\Caruosel_home\CrayBurn_2.jpg
+     - assets\Imagenes\Caruosel_home\CrayBurn_3.jpg
+     - assets\Imagenes\Caruosel_home\CrayBurn_4.jpg
+    #Imagen de login
      - assets\Imagenes\Google_logo.png
      - assets\Imagenes\Facebook-logo.png
      - assets\Imagenes\X_logo.jpg
+     #Imagenes de noticias
+     - assets\Imagenes\Noticias\corredor.jpg
+     - assets\Imagenes\Noticias\Kansas.jpg
+     - assets\Imagenes\Noticias\mexico.jpg
+     - assets\Imagenes\Noticias\Real_barce.jpg
+     - assets\Imagenes\Noticias\tenis.jpg
+     #Imagenes del Carousel de Nutricion
+     - assets\Imagenes\Nutricion\Kinoa.jpg 
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

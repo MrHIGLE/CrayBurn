@@ -4,15 +4,18 @@ class WorkoutHub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text('Workout Hub'),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context, '/main'); // Regresa al home
+            Navigator.pushReplacementNamed(context, '/home'); // Regresa al home
           },
         ),
       ),
+
+
       body: ListView(
         children: [
           // Categoría: Upper Body
