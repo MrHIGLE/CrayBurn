@@ -7,7 +7,6 @@ import 'LoginPage.dart';
 
 import 'Navegacion_Fotter/noticias.dart';
 import 'Navegacion_Fotter/workout.dart';
-import 'Navegacion_Fotter/comunidad.dart';
 void main() {
   runApp(MyApp());
 }
@@ -21,13 +20,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/registro': (context) => RegistroPage(),
         '/login': (context) => LoginPage(),
-        
         '/home': (context) => MyHomePage(),
-
-
         '/workout': (context) =>WorkoutHub(),
-        '/noticias': (context) => NoticiasWidget(),
-        '/comunidad': (context) => CommunityScreen(),
       },
       theme: ThemeData(
         appBarTheme: AppBarTheme(
@@ -53,26 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
         CarouselWidget(),
       ],
     ),
-    Text('workout'),
-    Text('noticias'),
-    Text('comunidad'),
+    WorkoutHub(),
+    NoticiasWidget(),
+    Text('Comunidad'),
   ];
 
   void onTabTapped(int index) {
-    if (index == 1) {
-      Navigator.pushNamed(context, '/workout'); // Navegar a WorkoutHub cuando se presiona el botón de Workout
-    }
-    else if(index == 2){
-      Navigator.pushNamed(context, '/noticias');
-    }
-    else if(index == 3){
-      Navigator.pushNamed(context, '/comunidad');
-    }
-    else{
-      setState(() {
+    setState(() {
       _currentIndex = index;
     });
-    }
   }
 
   @override
@@ -114,16 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors:[Color(0xFF1F1F1F), Color(0xFF3D3D3D)],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            ),
-        ),
-      child: _children[_currentIndex],
-      ),
+      body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -145,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         currentIndex: _currentIndex,
         backgroundColor: Color(0xFF1F1F1F), // Set background color to black
-        selectedItemColor: Color(0xFC223928), // Set selected item color to red
+        selectedItemColor: Colors.white, // Set selected item color to red
         unselectedItemColor: Color(0xFF3D3D3D), // Set unselected item color to white
         onTap: onTabTapped,
       ),
